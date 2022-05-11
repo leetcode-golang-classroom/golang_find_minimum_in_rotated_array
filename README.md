@@ -64,7 +64,7 @@ nums 是一個平移 過 k 位置的整數陣列，也就是假設原本陣列 n
 
 首先看下圖
 
-![shifted-array.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/99ddabad-fd9d-41f0-b1de-e01f9d802485/shifted-array.png)
+![](https://i.imgur.com/SSHObxM.png)
 
 如果把 $L = 0, R = len(nums),  M=(L+R)/2$ 
 
@@ -72,11 +72,11 @@ nums 是一個平移 過 k 位置的整數陣列，也就是假設原本陣列 n
 
 1. $nums[M] ≥ nums[L]$ , 要逼近 minimum 需要更新 L = M + 1
 
-![shift-M-in-left.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/645b8198-5b99-48c9-99b1-3d93f859b4ac/shift-M-in-left.png)
+![](https://i.imgur.com/kidWm9b.png)
 
 1. $nums[M] < nums[L]$, 要逼近 minimum 需要更新 R = M - 1
 
-![shift-M-in-right.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59f783f1-a22a-4fb7-aec4-7739fd53c990/shift-M-in-right.png)
+![](https://i.imgur.com/SAzkFSX.png)
 
 透過以上方式來做逼近就可以使用 binary search 來把時間複雜度優化到 O(logn)
 
